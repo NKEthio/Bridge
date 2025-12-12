@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import confetti from 'canvas-confetti';
@@ -15,14 +15,12 @@ const DraggableWord = ({ word, index }) => {
   }));
 
   return (
-    <motion.div
+    <div
       ref={drag}
       className={`draggable-word ${isDragging ? 'dragging' : ''}`}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
     >
       {word}
-    </motion.div>
+    </div>
   );
 };
 
@@ -105,11 +103,7 @@ const InteractiveLesson = ({ practice, onComplete, onBack }) => {
 
   if (practice.type === 'fill-blank') {
     return (
-      <motion.div 
-        className="interactive-lesson"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
+      <div className="interactive-lesson">
         <div className="interactive-header">
           <h3>✏️ Fill in the Blanks</h3>
           <p>{practice.instruction}</p>
@@ -176,18 +170,14 @@ const InteractiveLesson = ({ practice, onComplete, onBack }) => {
             </button>
           )}
         </div>
-      </motion.div>
+      </div>
     );
   }
 
   if (practice.type === 'drag-drop') {
     return (
       <DndProvider backend={HTML5Backend}>
-        <motion.div 
-          className="interactive-lesson"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
+        <div className="interactive-lesson">
           <div className="interactive-header">
             <h3>🎯 Drag and Drop</h3>
             <p>{practice.instruction}</p>
@@ -254,18 +244,14 @@ const InteractiveLesson = ({ practice, onComplete, onBack }) => {
               </button>
             )}
           </div>
-        </motion.div>
+        </div>
       </DndProvider>
     );
   }
 
   if (practice.type === 'multiple-choice') {
     return (
-      <motion.div 
-        className="interactive-lesson"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
+      <div className="interactive-lesson">
         <div className="interactive-header">
           <h3>📝 Multiple Choice Quiz</h3>
           <p>{practice.instruction}</p>
@@ -328,7 +314,7 @@ const InteractiveLesson = ({ practice, onComplete, onBack }) => {
             </button>
           )}
         </div>
-      </motion.div>
+      </div>
     );
   }
 

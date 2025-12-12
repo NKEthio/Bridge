@@ -1,7 +1,8 @@
 {
-  "name": "react-app",
+  "name": "bridge-learning-platform",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Bridge - Interactive learning platform to fill knowledge gaps",
   "type": "module",
   "scripts": {
     "dev": "vite",

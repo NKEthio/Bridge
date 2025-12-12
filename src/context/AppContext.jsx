@@ -2,6 +2,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 
 const AppContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useApp = () => {
   const context = useContext(AppContext);
   if (!context) {
@@ -42,26 +43,26 @@ export const AppProvider = ({ children }) => {
     localStorage.setItem('bridgeSettings', JSON.stringify(settings));
   }, [settings]);
 
-  // Calculate streak
+  // Calculate streak - run only once on mount
   useEffect(() => {
     const today = new Date().toDateString();
-    if (user.lastVisit) {
-      const lastVisit = new Date(user.lastVisit).toDateString();
+    const lastVisit = user.lastVisit ? new Date(user.lastVisit).toDateString() : null;
+    
+    if (!lastVisit) {
+      // First visit
+      setUser(prev => ({ ...prev, streak: 1, lastVisit: today }));
+    } else if (lastVisit !== today) {
+      // Different day
       const yesterday = new Date(Date.now() - 86400000).toDateString();
-      
-      if (lastVisit === today) {
-        // Same day, no change
-        return;
-      } else if (lastVisit === yesterday) {
+      if (lastVisit === yesterday) {
         // Consecutive day, increment streak
         setUser(prev => ({ ...prev, streak: prev.streak + 1, lastVisit: today }));
       } else {
         // Streak broken
         setUser(prev => ({ ...prev, streak: 1, lastVisit: today }));
       }
-    } else {
-      setUser(prev => ({ ...prev, streak: 1, lastVisit: today }));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const addPoints = (points) => {

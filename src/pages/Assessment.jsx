@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { useApp } from '../context/AppContext';
 import './Assessment.css';

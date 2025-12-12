@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Old static site backup
+old-static-site
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
