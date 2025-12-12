@@ -1,0 +1,255 @@
+.course-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.course-level {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.course-header h2 {
+  color: var(--primary-color);
+  margin: 15px 0;
+  font-size: 2em;
+}
+
+.course-progress {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.course-progress .progress-bar {
+  max-width: 600px;
+  margin: 10px auto;
+  height: 10px;
+}
+
+.course-progress span {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.lesson-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0;
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: var(--radius);
+}
+
+.lesson-nav-btn {
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.lesson-nav-btn:hover {
+  border-color: var(--primary-color);
+  background: #f0f4ff;
+}
+
+.lesson-nav-btn.active {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-color: transparent;
+}
+
+.lesson-nav-btn.completed {
+  border-color: var(--success-color);
+  position: relative;
+}
+
+.lesson-nav-btn.completed::after {
+  content: '✓';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--success-color);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+}
+
+.lesson-content-card {
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 30px;
+}
+
+.lesson-header h3 {
+  color: var(--secondary-color);
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.completed-badge {
+  color: var(--success-color);
+  font-size: 1.2em;
+}
+
+.lesson-body {
+  margin: 20px 0;
+}
+
+.content-section {
+  margin: 20px 0;
+}
+
+.content-section p {
+  line-height: 1.8;
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+
+.content-section h4 {
+  color: var(--primary-color);
+  margin: 20px 0 10px;
+  font-size: 1.3em;
+}
+
+.content-list {
+  list-style-position: inside;
+  line-height: 2;
+  margin: 15px 0;
+}
+
+.content-list li {
+  padding: 8px 0;
+  padding-left: 15px;
+}
+
+.example-box {
+  background: #e7f3ff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--primary-color);
+}
+
+.example-box strong {
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.example-box ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.example-box li {
+  padding: 5px 0;
+  line-height: 1.6;
+}
+
+.practice-section {
+  background: #fff3cd;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--warning-color);
+}
+
+.practice-section h4 {
+  color: var(--warning-color);
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.practice-section p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.lesson-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.lesson-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lesson-actions button:disabled:hover {
+  transform: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid var(--border-color);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .course-header h2 {
+    font-size: 1.5em;
+  }
+
+  .lesson-navigation {
+    padding: 15px;
+  }
+
+  .lesson-nav-btn {
+    font-size: 0.85em;
+    padding: 8px 15px;
+  }
+
+  .lesson-content-card {
+    padding: 20px;
+  }
+
+  .lesson-header h3 {
+    font-size: 1.4em;
+  }
+
+  .content-section p {
+    font-size: 1em;
+  }
+
+  .lesson-actions {
+    flex-direction: column;
+  }
+
+  .lesson-actions button {
+    width: 100%;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation button {
+    width: 100%;
+  }
+}

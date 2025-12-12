@@ -1,54 +1,16 @@
-# Bridge 🌉
+# React + Vite
 
-Fill your knowledge gap and reach your potential.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## About
+Currently, two official plugins are available:
 
-Bridge is a website that helps students with weak academic performance catch up and excel. We evaluate your current level, fill knowledge gaps, and guide you through continuous improvement.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Features
+## React Compiler
 
-### 📊 Evaluate
-Take a comprehensive test to identify your current level in English language skills.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### 📚 Learn
-Access personalized course materials tailored to your proficiency level:
-- **Beginner**: Master basic grammar, essential vocabulary, and simple sentences
-- **Intermediate**: Build complex grammar skills, expand vocabulary, and improve writing
-- **Advanced**: Refine sophisticated grammar, academic vocabulary, and critical analysis
+## Expanding the ESLint configuration
 
-### 🎯 Progress
-Continuous evaluation and improvement cycle - retake assessments to track your progress.
-
-## Getting Started
-
-1. Open `index.html` in a web browser
-2. Click "Start English Assessment"
-3. Complete the 10-question test
-4. Review your results and proficiency level
-5. Access your personalized course content
-6. Retake the assessment anytime to measure improvement
-
-## Structure
-
-- `index.html` - Landing page
-- `assessment.html` - English proficiency test
-- `assessment.js` - Test evaluation logic
-- `course-beginner.html` - Beginner level course
-- `course-intermediate.html` - Intermediate level course
-- `course-advanced.html` - Advanced level course
-- `styles.css` - Styling for all pages
-
-## Assessment Levels
-
-- **Beginner** (0-4 correct answers): Focus on fundamental grammar and basic vocabulary
-- **Intermediate** (5-7 correct answers): Build complex structures and expand vocabulary
-- **Advanced** (8-10 correct answers): Master sophisticated language and academic skills
-
-## Future Enhancements
-
-- Additional subjects (Mathematics, Science, etc.)
-- User accounts and progress tracking
-- Interactive exercises and quizzes
-- Practice tests with explanations
-- Mobile app version
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
