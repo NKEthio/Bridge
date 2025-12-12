@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import confetti from 'canvas-confetti';
 import { useApp } from '../context/AppContext';
 import InteractiveLesson from '../components/InteractiveLesson';

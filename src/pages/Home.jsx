@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { useApp } from '../context/AppContext';
 import './Home.css';
 
